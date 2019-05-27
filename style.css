@@ -1,0 +1,236 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Ubuntu', sans-serif;
+	color: #78E676;
+	background: #000;
+	font-size: 16px;
+}
+
+.container{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto 50px;
+	
+	grid-template-areas:
+  "header"
+  "maincontent"
+  "footer";
+}
+
+ul, section{
+	display: flex;
+}
+
+header{
+	grid-area: header;
+	justify-content: space-between;
+	width: 100%;
+	background: #000;
+	border-bottom: 1px solid #78E676;
+	position: fixed;
+}
+main{
+	grid-area: maincontent;
+}
+footer{
+	grid-area: footer;
+}
+
+.logo{
+	padding-left: 25px;
+	font-size: 3em;
+	font-family: 'VT323', monospace;
+	text-align: center;
+	margin-right: auto;
+}
+
+ul{
+	align-items: center;
+	max-width: 900px;
+	margin: auto;
+}
+
+ul li{
+	list-style-type: none;
+	text-align: center;
+	width: 170px;
+}
+
+li a{
+	text-decoration: none;
+	color: #78E676;
+	padding: 15px 0;
+	display: block;
+}
+
+li a:hover{
+	background: #444;
+}
+
+section{
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+section h1{
+	margin: 100px 0 20px;
+}
+
+form, input{
+	margin: 5px;
+}
+
+.email-input, .submit-btn{
+	padding: 8px;
+	border-radius: 3px;
+	border: none;
+	outline: none;
+	font-size: 1em;
+}
+
+.submit-btn{
+	background: gold;
+	color: #000;
+	font-weight: bold;
+}
+
+.submit-btn:hover{
+	color: red;
+}
+	
+.submit-btn:active{
+	transform: scale(1.1);
+}
+
+.features{
+	padding:  50px;
+	margin: 50px 0;
+}
+
+.features h2{
+	margin-bottom: 25px;
+}
+
+.video{
+	margin: 100px auto 150px;
+	max-width: 560px;
+}
+
+.price{
+	width: 450px;
+	margin: 0 auto 50px;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.red-blue{
+	width: 200px;
+	border: 2px solid #78E676;
+}
+
+.pill-box{
+	padding: 25px;
+	background: #78E676;
+	color: #000;
+}
+
+.detail{
+	padding: 55px 25px;
+	border-bottom: 2px solid #78E676;
+}
+
+.price-box{
+	padding: 15px;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.footer{
+	height: 100%;
+	padding: 15px;
+	text-align: center;
+	font-size: 18px;
+	border-top: 1px solid #78E676;
+}
+
+.name-style{
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 600px){
+	body{
+		font-size: 15px;
+	}
+	
+	.logo{
+		padding: 0 15px;
+		font-size: 3em;
+	}
+
+	ul li{
+		flex: 1 1 150px;
+	}
+
+	#video{
+		margin: auto;
+		width: 400px;
+	}
+
+	.price{
+		width: 420px;
+		margin: 0 auto 50px;
+	}
+
+	.red-blue{
+		width: 190px;
+	}
+
+	.pill-box{
+		padding: 15px;
+	}
+
+	.detail{
+		padding: 55px 25px;
+	}
+	
+	.footer{
+		font-size: 16px;
+	}
+}
+
+/* MEDIA 400 */
+@media screen and (max-width: 450px){
+	body{
+		min-width: 320px;
+		font-size: 14px;
+	}
+
+	#video{
+		width: 300px;
+	}
+
+	.price{
+		width: 320px;
+	}
+
+	.red-blue{
+		width: 150px;
+	}
+
+	.detail{
+		padding: 35px 15px;
+	}
+
+	.price-box{
+		font-size: 1.3em;
+	}
+}
